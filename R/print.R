@@ -13,5 +13,6 @@
 #' \dontrun{print(obj)}
 
 print.Rttest = function(x, ...) {
-  kableExtra::kable(obj$data, table.attr = "style = 'width: 30%'", align = 'r')
+  obj <- NULL
+  kable(obj$data, table.attr = "style = 'width: 30%'", align = 'r')
 }

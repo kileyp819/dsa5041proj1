@@ -7,6 +7,7 @@
 #' @param x a vector
 #' @param y a vector
 #' @param alpha level of significance
+#' @importFrom stats t.test
 #'
 #' @return a named list of class Rttest containing a data
 #'        frame containing x and y, alpha, the confidence
@@ -18,6 +19,7 @@
 #' obj <- myconstr(x = x, y = y, alpha = 0.05)}
 
 myconstr = function(x, y, alpha){
+  obj <- NULL
   obj = list(data = data.frame(x = x, y = y), alpha = alpha,
              t.test(x, y, conf.level = 0.95)$conf.int,
              t.test(x, y, conf.level = 0.95)$p.value)
